@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>EcLab</title>
+		<p>Extra Credit Lab</p>
+	</head>
+
+	<body>
+	<h2>Full Name Generator</h2>
+    <form id="fullNameForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+        <input type="submit" value="Generate Full Name">
+    </form>
+
+    <div id="fullName"></div>
+
+    <script>
+        document.getElementById('fullNameForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values of the input fields
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+
+            // Concatenate first name and last name to form full name
+            var fullName = firstName + ' ' + lastName;
+
+            // Display the full name
+            document.getElementById('fullName').innerText = 'Full Name: ' + fullName;
+        });
+    </script>
+</body>
+</html>	
